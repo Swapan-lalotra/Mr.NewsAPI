@@ -100,7 +100,7 @@ function inArray(target, array) {
 
 
 app.get('/', (req, res) => {
-    res.json(' Welcome to our own News API by MR.News - Swapan')
+    res.json(' Welcome to MR.NewsAPI - by Swapan Lalotra')
 })
 
 app.get('/news', async (req, res) => {
@@ -120,7 +120,7 @@ app.get('/news', async (req, res) => {
                     const url = $(this).find('h2').find('a').attr('href')
                     const imgurl = $(this).find('img').attr('src')
 
-                    console.log("URL : " + url + "\nTITLE :" + title)
+                    // console.log("URL : " + url + "\nTITLE :" + title)
                     if (title != "" && !inArray(title, globalarticles)) {
                         globalarticles.push({
                             title,
@@ -143,7 +143,7 @@ app.get('/news', async (req, res) => {
                     const title = $(this).text().trim()
                     const url = $(this).find('a').attr('href')
                     const imgurl = $(this).find('a').find('img').attr('data-src')
-                    console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
+                    // console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
                     // console.log($(this).text())
                     if (!inArray(title, globalarticles)) {
                         globalarticles.push({
@@ -164,7 +164,7 @@ app.get('/news', async (req, res) => {
                     const title = $(this).find('a').text().trim()
                     const furl = $(this).find('a').attr('href')
                     const imgurl = $(this).find('img').attr('src')
-                    console.log("URL : " + furl + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
+                    // console.log("URL : " + furl + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
                     // console.log($(this))
                     const url = baseurl + furl;
                     if (imgurl != null && !inArray(title, globalarticles)) {
@@ -209,7 +209,7 @@ app.get('/news/india', async (req, res) => {
                     const url = $(this).find('h2').find('a').attr('href')
                     const imgurl = $(this).find('img').attr('src')
 
-                    console.log("URL : " + url + "\nTITLE :" + title)
+                    // console.log("URL : " + url + "\nTITLE :" + title)
                     if (title != "" && !inArray(title, indiaarticles)) {
                         indiaarticles.push({
                             title,
@@ -232,7 +232,7 @@ app.get('/news/india', async (req, res) => {
                     const title = $(this).text().trim()
                     const url = $(this).find('a').attr('href')
                     const imgurl = $(this).find('a').find('img').attr('data-src')
-                    console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
+                    // console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
                     // console.log($(this).text())
                     if (!inArray(title, indiaarticles)) {
                         indiaarticles.push({
@@ -278,7 +278,7 @@ app.get('/news/india/tech', async (req, res) => {
                     const url = $(this).find('a').attr('href')
                     const imgurl = $(this).find('img').attr('src')
 
-                    console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
+                    // console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
                     if (imgurl != null && !inArray(title, techindiaarticles)) {
                         techindiaarticles.push({
                             title,
@@ -301,7 +301,7 @@ app.get('/news/india/tech', async (req, res) => {
                     const title = $(this).text().trim()
                     const url = $(this).find('a').attr('href')
                     const imgurl = $(this).find('a').find('img').attr('data-src')
-                    console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
+                    // console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
                     // console.log($(this).text())
                     if (imgurl != null && !inArray(title, techindiaarticles)) {
                         techindiaarticles.push({
@@ -341,7 +341,7 @@ app.get('/news/india/entertainment', async (req, res) => {
                     const url = $(this).attr('href')
                     const imgurl = $(this).find('img').attr('data-src')
 
-                    console.log("URL : " + url + "\nTITLE :" + title)
+                    // console.log("URL : " + url + "\nTITLE :" + title)
                     if (title && imgurl != null && !inArray(title, entertainmentindiaarticles)) {
                         entertainmentindiaarticles.push({
                             title,
@@ -364,7 +364,7 @@ app.get('/news/india/entertainment', async (req, res) => {
                     const title = $(this).text().trim()
                     const url = $(this).find('a').attr('href')
                     const imgurl = $(this).find('a').find('img').attr('data-src')
-                    console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
+                    // console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
                     // console.log($(this).text())
                     if (!inArray(title, entertainmentindiaarticles) && imgurl != null) {
                         entertainmentindiaarticles.push({
@@ -405,8 +405,8 @@ app.get('/news/crypto', async (req, res) => {
                     const url = $(this).find('h2').find('a').attr('href')
                     const imgurl = $(this).find('img').attr('src')
 
-                    console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
-                    console.log("TITLE EXISTS : " + inArray(title, cryptoarticles))
+                    // console.log("URL : " + url + "\nTITLE :" + title + "\nIMG :" + imgurl + "\nSource : " + site.name)
+                    // console.log("TITLE EXISTS : " + inArray(title, cryptoarticles))
                     if (!inArray(title, cryptoarticles) && title != "") {
                         cryptoarticles.push({
                             title,
