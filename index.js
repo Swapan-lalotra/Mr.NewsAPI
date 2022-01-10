@@ -136,7 +136,7 @@ app.get('/news', async (req, res) => {
 
                 })
             } else if (site.name == "republicbharat") {
-                console.log("IM in Republic bharat")
+                // console.log("IM in Republic bharat")
                 // console.log($(this))
 
                 $('article').each(async function () {
@@ -180,7 +180,7 @@ app.get('/news', async (req, res) => {
                 })
             }
         });
-        res.json(globalarticles)
+        res.json(globalarticles.length > 0  ? globalarticles : "Refresh for result ... ")
 
     } catch (err) {
         res.json("ERROR in Global News Websites." + err)
@@ -225,7 +225,7 @@ app.get('/news/india', async (req, res) => {
 
                 })
             } else if (site.name == "republicbharat") {
-                console.log("IM in Republic bharat")
+                // console.log("IM in Republic bharat")
                 // console.log($(this))
 
                 $('article').each(async function () {
@@ -249,7 +249,7 @@ app.get('/news/india', async (req, res) => {
 
             }
         });
-        res.json(indiaarticles)
+        res.json(indiaarticles.length > 0 ? indiaarticles : "Refresh for result ... ")
 
     } catch (err) {
         res.json("ERROR in India news Websites." + err)
@@ -294,7 +294,7 @@ app.get('/news/india/tech', async (req, res) => {
 
                 })
             } else if (site.name == "republicbharat") {
-                console.log("IM in Republic bharat")
+                // console.log("IM in Republic bharat")
                 // console.log($(this))
 
                 $('article').each(async function () {
@@ -319,7 +319,7 @@ app.get('/news/india/tech', async (req, res) => {
 
         })
 
-        res.json(techindiaarticles)
+        res.json(techindiaarticles.length > 0 ? techindiaarticles : "Refresh for result ... ")
     } catch (err) {
         res.json("ERROR in india tech NEWS SITES " + err)
     }
@@ -357,7 +357,7 @@ app.get('/news/india/entertainment', async (req, res) => {
 
                 })
             } else if (site.name == "republicbharat") {
-                console.log("IM in Republic bharat")
+                // console.log("IM in Republic bharat")
                 // console.log($(this))
 
                 $('article').each(async function () {
@@ -382,7 +382,7 @@ app.get('/news/india/entertainment', async (req, res) => {
 
         })
 
-        res.json(entertainmentindiaarticles)
+        res.json(entertainmentindiaarticles.length > 0 ? entertainmentindiaarticles : "Refresh for result ... ")
     } catch (err) {
         res.json("ERROR in indian Entertainment NEWS SITES " + err)
     }
@@ -424,7 +424,7 @@ app.get('/news/crypto', async (req, res) => {
             }
 
         });
-        res.json(cryptoarticles)
+        res.json(cryptoarticles.length > 0 ? cryptoarticles : "Refresh for result ... ")
     } catch (err) {
         res.json("ERROR in CRYPTO Websites." + err)
 
