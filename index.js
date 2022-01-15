@@ -180,7 +180,7 @@ app.get('/news', async (req, res) => {
                 })
             }
         });
-        res.json(globalarticles.length > 0  ? globalarticles : "Refresh for result ... ")
+        res.json(globalarticles.length > 0  ? globalarticles : {"message":"Refresh for result ... "})
 
     } catch (err) {
         res.json("ERROR in Global News Websites." + err)
@@ -249,7 +249,7 @@ app.get('/news/india', async (req, res) => {
 
             }
         });
-        res.json(indiaarticles.length > 0 ? indiaarticles : "Refresh for result ... ")
+        res.json(indiaarticles.length > 0 ? indiaarticles : {"message":"Refresh for result ... "})
 
     } catch (err) {
         res.json("ERROR in India news Websites." + err)
@@ -319,7 +319,7 @@ app.get('/news/india/tech', async (req, res) => {
 
         })
 
-        res.json(techindiaarticles.length > 0 ? techindiaarticles : "Refresh for result ... ")
+        res.json(techindiaarticles.length > 0 ? techindiaarticles : {"message":"Refresh for result ... "})
     } catch (err) {
         res.json("ERROR in india tech NEWS SITES " + err)
     }
@@ -382,7 +382,7 @@ app.get('/news/india/entertainment', async (req, res) => {
 
         })
 
-        res.json(entertainmentindiaarticles.length > 0 ? entertainmentindiaarticles : "Refresh for result ... ")
+        res.json(entertainmentindiaarticles.length > 0 ? entertainmentindiaarticles : {"message":"Refresh for result ... "})
     } catch (err) {
         res.json("ERROR in indian Entertainment NEWS SITES " + err)
     }
@@ -424,7 +424,7 @@ app.get('/news/crypto', async (req, res) => {
             }
 
         });
-        res.json(cryptoarticles.length > 0 ? cryptoarticles : "Refresh for result ... ")
+        res.json(cryptoarticles.length > 0 ? cryptoarticles : {"message":"Refresh for result ... "})
     } catch (err) {
         res.json("ERROR in CRYPTO Websites." + err)
 
